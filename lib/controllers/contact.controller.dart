@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import 'package:nfc_manager/nfc_manager.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '../ui/view/utils/show_snackbar.dart';
+import '../ui/utils/show_snackbar.dart';
 
 class ContactController extends GetxController {
   late BuildContext context;

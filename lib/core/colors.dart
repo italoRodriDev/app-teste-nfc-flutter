@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class AppColor {
   static Color background = const Color.fromARGB(255, 241, 241, 241);
   static Color textColor = const Color.fromARGB(255, 0, 0, 0);
-  static Color primary = const Color.fromARGB(255, 64, 169, 243);
-  static Color secondary = const Color.fromARGB(255, 64, 169, 243);
+  static Color primary = const Color.fromARGB(255, 153, 0, 255);
+  static Color secondary = const Color.fromARGB(255, 153, 0, 255);
   static Color tertiary = const Color.fromARGB(255, 0, 210, 203);
   static Color success = const Color.fromARGB(255, 45, 211, 111);
   static Color warning = const Color.fromARGB(255, 255, 196, 9);

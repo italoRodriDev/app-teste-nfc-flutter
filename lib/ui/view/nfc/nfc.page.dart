@@ -6,9 +6,9 @@ import '../../../../components/button_component.dart';
 import '../../../../core/colors.dart';
 import '../../../components/text_component.dart';
 import '../../../controllers/contact.controller.dart';
-import '../utils/toolbar.dart';
+import '../../utils/toolbar.dart';
 
-class ContactPage extends GetView<ContactController> {
+class NfcPage extends GetView<ContactController> {
   ContactController contactCtrl = Get.put(ContactController());
   @override
   Widget build(BuildContext context) {

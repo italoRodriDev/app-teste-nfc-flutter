@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../components/button_component.dart';
-import '../../../core/colors.dart';
+import '../../../components/button_component.dart';
+import '../../core/colors.dart';
 
 class ShowAlertCurstom extends StatelessWidget {
   String title;

@@ -42,6 +42,7 @@ dependencies:
   url_launcher: ^6.1.10
   flutter_svg: ^0.23.0+1
   share_plus: any
+  image: ^3.0.1
 
 dev_dependencies:
   flutter_test:

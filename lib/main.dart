@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testenfc/routes/app_pages.dart';
 import 'package:testenfc/routes/app_routes.dart';
-import 'package:testenfc/ui/view/theme/app_theme.dart';
+import 'package:testenfc/ui/theme/app_theme.dart';
 
 void main() async {
   runApp(GetMaterialApp(
-    title: 'Teste NFC',
+    title: 'App de Testes',
     debugShowCheckedModeBanner: false,
     getPages: AppPages.routes,
-    initialRoute: Routes.HOME,
+    initialRoute: Routes.ASSINATURA_DIGITAL,
     theme: appThemeData,
   ));
 }

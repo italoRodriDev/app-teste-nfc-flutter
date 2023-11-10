@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 final ThemeData appThemeData = ThemeData(
     brightness: Brightness.light,
-    primaryColor: const Color.fromARGB(255, 0, 163, 255),
-    secondaryHeaderColor: Colors.blue,
+    primaryColor: Color.fromARGB(255, 153, 0, 255),
+    secondaryHeaderColor: Color.fromARGB(255, 153, 0, 255),
     scaffoldBackgroundColor: const Color.fromARGB(255, 242, 245, 255),
     fontFamily: 'Poppins',
     textTheme: const TextTheme(
@@ -17,7 +17,7 @@ final ThemeData appThemeData = ThemeData(
     checkboxTheme:
         CheckboxThemeData(fillColor: MaterialStateColor.resolveWith((states) {
       if (states.contains(MaterialState.selected)) {
-        return const Color.fromARGB(255, 4, 206, 207);
+        return const Color.fromARGB(255, 153, 0, 255);
       } else {
         return Colors.black;
       }
