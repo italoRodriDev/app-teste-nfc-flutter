@@ -2,6 +2,7 @@
 import 'package:get/get.dart';
 import 'package:testenfc/ui/view/assinatura-digital/assinatura-digital.page.dart';
 import 'package:testenfc/ui/view/nfc/nfc.page.dart';
+import 'package:testenfc/ui/view/sincronizar-dados-offline/sincronizar-dados-offline.dart';
 import 'app_routes.dart';
 
 class AppPages {
@@ -15,6 +16,12 @@ class AppPages {
     GetPage(
       name: Routes.NFC,
       page: () => NfcPage(),
+      transition: Transition.circularReveal,
+      transitionDuration: const Duration(milliseconds: 1000),
+    ),
+     GetPage(
+      name: Routes.SINCRONIZAR_DADOS,
+      page: () => SincronizarDadosPage(),
       transition: Transition.circularReveal,
       transitionDuration: const Duration(milliseconds: 1000),
     ),
