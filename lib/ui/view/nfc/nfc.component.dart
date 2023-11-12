@@ -3,34 +3,54 @@ import 'package:flutter_nfc_kit/flutter_nfc_kit.dart';
 import 'package:ndef/ndef.dart' as ndef;
 import 'package:testenfc/ui/utils/show_snackbar.dart';
 import '../../../components/button_component.dart';
+import '../../../components/input_text_component.dart';
 import '../../../core/colors.dart';
 
 class NfcComponent extends StatefulWidget {
-  String textTag;
-  NfcComponent({super.key, required this.textTag});
+  const NfcComponent({super.key});
 
   @override
   State<NfcComponent> createState() => _NfcComponentState();
 }
 
 class _NfcComponentState extends State<NfcComponent> {
+  GlobalKey globalKey = GlobalKey();
+  TextEditingController textEditUrlCtrl = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return ButtonComponent(
-        labelBtn: 'Compartilhar',
-        padding: 2,
-        radiusBtn: 4,
-        colorIcon: AppColor.primary,
-        colorBorder: AppColor.primary,
-        textColor: AppColor.primary,
-        gradientColor1: const Color.fromARGB(255, 4, 206, 207),
-        gradientColor2: const Color.fromARGB(255, 64, 169, 243),
-        elevation: 0,
-        onPressed: () async {
-          if (widget.textTag.isNotEmpty) {
-            _shareNFC(widget.textTag.toString());
-          }
-        });
+    return Column(
+      children: [
+        Form(
+            key: globalKey,
+            child: Column(
+              children: [
+                const SizedBox(height: 20),
+                InputTextComponent(
+                    textEditingController: textEditUrlCtrl,
+                    labelText: 'URL/Texto',
+                    hintText: 'Digite a URL ou texto...',
+                    borderColor: AppColor.primary),
+              ],
+            )),
+        const SizedBox(height: 20),
+        ButtonComponent(
+            labelBtn: 'Compartilhar',
+            padding: 2,
+            radiusBtn: 4,
+            colorIcon: AppColor.primary,
+            colorBorder: AppColor.primary,
+            textColor: AppColor.primary,
+            gradientColor1: const Color.fromARGB(255, 4, 206, 207),
+            gradientColor2: const Color.fromARGB(255, 64, 169, 243),
+            elevation: 0,
+            onPressed: () async {
+              if (textEditUrlCtrl.text.isNotEmpty) {
+                _shareNFC(textEditUrlCtrl.text.toString());
+              }
+            })
+      ],
+    );
   }
 
   Future<void> _shareNFC(String url) async {
